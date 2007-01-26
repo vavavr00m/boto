@@ -19,3 +19,5 @@ _italics_ indicates an optional parameter
 >>> b1.enable_logging(b2)
 >>>
 }}}
+
+This example would enable logging on Bucket b1, sending the log files for b1 to Bucket b2.  See SetAsLoggingTarget for information about how to set the permissions on the target bucket to allow log messages to be written.
