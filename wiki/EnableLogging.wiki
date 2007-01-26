@@ -7,10 +7,10 @@ enable_logging
 
 ===Parameters===
 *bold* indicates required parameter
-__italics__ indicates an optional parameter
+_italics_ indicates an optional parameter
 
-  * target_bucket - the bucket to which logging files will be written
-  * target_prefix - a prefix for the keys that the delivered log files will be stored under
+  * *target_bucket* - the bucket to which logging files will be written
+  * _target_prefix_ - a prefix for the keys that the delivered log files will be stored under
 
 *Examples*
 {{{
