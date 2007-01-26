@@ -2,8 +2,13 @@ The enable_logging method of the Bucket object provides a way to enable [http://
 
 ==Method Description==
 
-*Name* enable_logging
-*Parameters*
+===Name===
+enable_logging
+
+===Parameters===
+*bold* indicates required parameter
+__italics__ indicates an optional parameter
+
   * target_bucket - the bucket to which logging files will be written
   * target_prefix - a prefix for the keys that the delivered log files will be stored under
 
