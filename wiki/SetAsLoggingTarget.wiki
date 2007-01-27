@@ -1,3 +1,4 @@
+#labels Featured,Phase-Implementation
 =set_as_logging_target=
 
 The set_as_logging_target method of the Bucket object provides a way to quickly set the correct permissions on a bucket to allow it to be a logging target for another bucket (see [http://docs.amazonwebservices.com/AmazonS3/2006-03-01/ServerLogs.html Server Access Logging] for more details).  This logging provides web server style log files documenting all interactions with the bucket.
