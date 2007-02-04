@@ -1,3 +1,4 @@
+#labels Phase-Deploy
 #How to install and use boto from subversion
 
 = Introduction =
@@ -23,4 +24,14 @@ The trick now is to get Python to include this directory in it's list of paths t
 $ export PYTHONPATH=$PYTHONPATH:/home/mitch/Projects/boto
 }}}
 You would probably want to add this to one of your startup scripts to make sure it gets set each time you login or start up a shell.
-  # Add a symbolic link to your boto directory in the Python site
+  # Add a symbolic link to your boto directory in the Python site.  Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.4/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
+{{{
+$ sudo ln -s /home/mitch/Projects/boto /usr/local/lib/python2.4/site-packages
+}}}
+This approach would make the boto directory available to all users on the system but requires the ability to sudo or act as root on your system.
+
+Once this is set up, you should be able to import boto just as you would if you had installed it with the Python setup.py installer.  Anytime you want to update your boto directory to the latest version, just:
+{{{
+$ cd /home/mitch/Projects/boto
+$ svn update
+}}}
