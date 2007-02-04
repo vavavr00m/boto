@@ -19,12 +19,15 @@ This will create a directory called _boto_ in the current directory.  This direc
 
 The trick now is to get Python to include this directory in it's list of paths to search when you import a module.  There are really two ways to do this:
 
-  # Add the boto directory to the PYTHONPATH environment variable.  In Linux or MacOS environments using bash-like shells this would be done like this:
+===Add the boto directory to the PYTHONPATH environment variable===
+In Linux or MacOS environments using bash-like shells this would be done like this:
 {{{
 $ export PYTHONPATH=$PYTHONPATH:/home/mitch/Projects/boto
 }}}
 You would probably want to add this to one of your startup scripts to make sure it gets set each time you login or start up a shell.
-  # Add a symbolic link to your boto directory in the Python site.  Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.4/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
+
+===Add a symbolic link to your boto directory in the Python site===
+Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.4/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
 {{{
 $ sudo ln -s /home/mitch/Projects/boto /usr/local/lib/python2.4/site-packages
 }}}
