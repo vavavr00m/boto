@@ -14,6 +14,9 @@ _italics_ indicates an optional parameter
 
   * none
 
+===Returns===
+Boolean True if successful or False if unsuccessful.
+
 *Examples*
 {{{
 >>> rs = connection.get_all_instances()
