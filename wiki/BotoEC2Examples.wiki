@@ -1,0 +1,22 @@
+#summary Examples with EC2
+
+= Introduction =
+
+A collection of examples using boto to interface with Amazon's Elastic Compute Cloud (EC2).
+
+
+= Details =
+
+Operations on EC2 Image objects:
+  * run
+  * deregister
+  * get_launch_permissions
+  * set_launch_permissions
+  * remove_launch_permissions
+  * reset_launch_permissions
+
+Operations on EC2 instance objects:
+  * update
+  * stop
+  * [reboot]
+  * [get_console_output]
