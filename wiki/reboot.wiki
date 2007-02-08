@@ -1,4 +1,4 @@
-#labels Phase-Implementation
+#labels Phase-Implementation,Featured
 =reboot=
 
 The reboot method of the Instance object provides a way to reboot an EC2 instance.
