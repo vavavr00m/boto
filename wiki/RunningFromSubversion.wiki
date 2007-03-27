@@ -24,7 +24,7 @@ In Linux or MacOS environments using bash-like shells this would be done like th
 {{{
 $ export PYTHONPATH=$PYTHONPATH:/home/mitch/Projects/boto
 }}}
-You would probably want to add this to one of your startup scripts to make sure it gets set each time you login or start up a shell.
+You would probably want to add this to one of your startup scripts to make sure it gets set each time you login or start up a shell.  You may also need to add the PYTHONPATH environment variable to your IDE's settings.
 
 ===Add a symbolic link to your boto directory in the Python site===
 Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.4/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
