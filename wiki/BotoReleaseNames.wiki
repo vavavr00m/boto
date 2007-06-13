@@ -13,7 +13,7 @@ The problem with that convention is that it implies a very linear progression of
 
 == The New Scheme ==
 
-To avoid this dilemma, boto will now use a release naming scheme based on families of words that are relevant to the namesake of the library, the Amazon River Dolphin or boto.  A family of names will be generated based on some characteristic of the boto and those names will then be used, in alphabetical order, as the next set of release names for boto.  For example, the first characteristic that will be used to generate release names is the geographic distribution of the boto, i.e. the countries in which in can be found.  So, the first set of release names is:
+To avoid this dilemma, boto will now use a release naming scheme based on families of words that are relevant to the namesake of the library, the [http://en.wikipedia.org/wiki/Boto Amazon River Dolphin or boto].  A family of names will be generated based on some characteristic of the boto and those names will then be used, in alphabetical order, as the next set of release names for boto.  For example, the first characteristic that will be used to generate release names is the geographic distribution of the boto, i.e. the countries in which it can be found.  So, the first set of release names is:
 
   * Bolivia
   * Brazil
