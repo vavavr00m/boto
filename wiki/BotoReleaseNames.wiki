@@ -28,3 +28,5 @@ Each of these names would represent a major release of boto which incorporated s
 {{{<release_name>_<patch-level>}}}
 
 where patch level is an integer starting with zero.  So, the first release using the new naming scheme will be *Bolivia_0*, then *Bolivia_1*, etc.
+
+When this family of names is exhausted, a new characteristic of the boto will be chosen which will generate a new family of names.
