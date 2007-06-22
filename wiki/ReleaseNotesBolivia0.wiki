@@ -14,9 +14,9 @@ We are pleased to announce the availability of a new boto release; Bolivia_0.  T
   * The HTTPS connection has been parameterized within Boto to permit the use of the M2Crypto library which actually verifies the certificate of the server.  Many thanks to Jon Colverson for contributing this code as well as the contrib/m2helpers.py module.
   * The new SQS methods GetQueueAttributes and SetQueueAttributes are now supported.  This allows you to query a queue for the approximate number of messages in the queue.
   * The S3 library now fully supports the {{{delimiter}}} option.
-  * The S3 library now allows a callback to be passed to the methods that get/put content to S3.  This enables feedback during large file transfers.
+  * The S3 library now allows a callback to be passed to the methods that get/put content to S3.  This enables feedback during large file transfers.  See [http://groups.google.com/group/boto-users/browse_frm/thread/76a8362d291ccc53/# this] for more info.
   * Improved error reporting by including the XML response body as part of the exceptions
-  * Cleaned up and improved the sending/receiving of files to/from S3, including addition of Expect header in PUT's to address issues with files > 2.1GB in size
+  * Cleaned up and improved the sending/receiving of files to/from S3, including addition of Expect header in PUT's to address issues with files > 2.1GB in size.  See [http://developer.amazonwebservices.com/connect/thread.jspa?threadID=15283&tstart=30 this] for more info.
   * Many smaller interface changes suggested by the boto community (see [http://groups.google.com/group/boto-users/browse_frm/thread/03e22359bc073d43 this thread] ) for details
   * Improved docstrings for classes and methods.  Still not perfect but better!
 
