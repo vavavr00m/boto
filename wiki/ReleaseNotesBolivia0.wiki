@@ -18,6 +18,7 @@ We are pleased to announce the availability of a new boto release; Bolivia_0.  T
   * Improved error reporting by including the XML response body as part of the exceptions
   * Cleaned up and improved the sending/receiving of files to/from S3, including addition of Expect header in PUT's to address issues with files > 2.1GB in size
   * Many smaller interface changes suggested by the boto community (see [http://groups.google.com/group/boto-users/browse_frm/thread/03e22359bc073d43 this thread] ) for details
+  * Improved docstrings for classes and methods.  Still not perfect but better!
 
 = Complete ChangeLog for Bolivia_0 Release =
 
