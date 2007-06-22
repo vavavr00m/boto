@@ -25,8 +25,8 @@ To avoid this dilemma, boto will now use a release naming scheme based on famili
 
 Each of these names would represent a major release of boto which incorporated some major new functionality.  Within each release, incremental releases could be made to fix bugs or to introduce some very minor new capability.  So, the general naming convention is:
 
-{{{<release_name>_<patch-level>}}}
+{{{<release_name>.<patch-level>}}}
 
-where patch level is an integer starting with zero.  So, the first release using the new naming scheme will be *Bolivia_0*, then *Bolivia_1*, etc.
+where patch level is an integer starting with zero.  So, the first release using the new naming scheme will be *Bolivia.0*, then *Bolivia.1*, etc.
 
 When this family of names is exhausted, a new characteristic of the boto will be chosen which will generate a new family of names.
