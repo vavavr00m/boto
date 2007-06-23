@@ -1,7 +1,7 @@
 #labels Featured
-#So what the heck is a boto?
+==So what the heck is a boto?==
 
-According to [http://wikipedia.org/ wikipedia] a boto is:
+According to [http://wikipedia.org/ wikipedia]:
 
 {{{
 The Boto, Amazon River Dolphin or Pink River Dolphin[1] (Inia geoffrensis) is a freshwater river dolphin endemic to the Amazon River and Orinoco River systems.
