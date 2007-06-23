@@ -1,18 +1,19 @@
-#summary Release Notes for Bolivia_0 release of Boto
+#summary Release Notes for 0.9a release of Boto
 
 = Introduction =
 
-We are pleased to announce the availability of a new boto release; Bolivia_0.  The first change you will probably notice is that the scheme used for naming boto releases has changed.  BotoReleaseNames describes the new scheme in gory detail.
+We are pleased to announce the availability of a new boto release; 0.9a.
 
 
-= Highlights of Bolivia_0 Release =
+= Highlights of 0.9a Release =
 
   * Boto now supports Amazon's Mechanical Turk service.  Many thanks to Ansel Halliburton for contributing this code.
   * Boto now supports the 2007-01-19 version of the EC2 API
   * SQS Queues now have methods to save and restore messages to/from S3
   * The S3 interface now allows you to iterate over all keys in a bucket, transparently handling the paged results returned by S3
   * The HTTPS connection has been parameterized within Boto to permit the use of the M2Crypto library which actually verifies the certificate of the server.  Many thanks to Jon Colverson for contributing this code as well as the contrib/m2helpers.py module.
-  * The new SQS methods GetQueueAttributes and SetQueueAttributes are now supported.  This allows you to query a queue for the approximate number of messages in the queue.
+  * The new SQS methods GetQueueAttributes and SetQueueAttributes are now supported.  This allows you to query a queue for the approximate number of messages in the queue. See [http://docs.amazonwebservices.com/AWSSimpleQueueService/2007-05-01/SQSDeveloperGuide/Query_QueryChangeMessageVisibility.html this] for details.
+  * The new SQS method ChangeMessageVisibility is now supported.  This feature is most easily accessed via the Message.change_visibility method.  See [http://docs.amazonwebservices.com/AWSSimpleQueueService/2007-05-01/SQSDeveloperGuide/Query_QueryChangeMessageVisibility.html  this] for details.
   * The S3 library now fully supports the {{{delimiter}}} option.
   * The S3 library now allows a callback to be passed to the methods that get/put content to S3.  This enables feedback during large file transfers.  See [http://groups.google.com/group/boto-users/browse_frm/thread/76a8362d291ccc53/# this] for more info.
   * Improved error reporting by including the XML response body as part of the exceptions
