@@ -1,4 +1,5 @@
 #summary A collection of examples for various API calls
+#labels Featured
 
 = Introduction =
 
