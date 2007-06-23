@@ -1,4 +1,4 @@
-#labels Featured,Phase-Implementation
+#labels Phase-Implementation
 =enable_logging=
 
 The enable_logging method of the Bucket object provides a way to enable [http://docs.amazonwebservices.com/AmazonS3/2006-03-01/ServerLogs.html Server Access Logging] on an S3 bucket.  This logging provides web server style log files documenting all interactions with the bucket.
