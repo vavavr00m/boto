@@ -21,7 +21,7 @@ We are pleased to announce the availability of a new boto release; 0.9a.
   * Many smaller interface changes suggested by the boto community (see [http://groups.google.com/group/boto-users/browse_frm/thread/03e22359bc073d43 this thread] ) for details
   * Improved docstrings for classes and methods.  Still not perfect but better!
 
-= Complete ChangeLog for Bolivia_0 Release =
+= Complete ChangeLog for 0.9a Release =
 
 {{{
 ------------------------------------------------------------------------
