@@ -1,4 +1,4 @@
-#labels Phase-Implementation,Featured
+#labels Phase-Implementation
 =get_console_output=
 
 The get_console_output method of the Instance object provides a way to retrieves console output that has been posted for the specified EC2 instance.
