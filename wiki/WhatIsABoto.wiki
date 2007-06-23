@@ -1,3 +1,4 @@
+#labels Featured
 #So what the heck is a boto?
 
 According to [http://wikipedia.org/ wikipedia] a boto is:
