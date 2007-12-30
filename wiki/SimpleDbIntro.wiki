@@ -7,6 +7,7 @@ This page will give you a quick overview of the current boto SimpleDB library.
 
 = Details =
 
+{{{
 >>> import boto
 >>> sdb = boto.connect_sdb()
 >>> domain = sdb.create_domain('my_domain')
@@ -31,3 +32,4 @@ item1
 ... 
 item1
 >>> 
+}}}
