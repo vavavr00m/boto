@@ -7,25 +7,77 @@ This page will give you a quick overview of the current boto SimpleDB library.
 
 = Details =
 
+To begin with SimpleDB, you create a connection to the SimpleDB service just like you do with all other boto interfaces.
+
 {{{
 >>> import boto
 >>> sdb = boto.connect_sdb()
+}}}
+
+Once you have a connection, you can create a new domain, like this:
+
+{{{
 >>> domain = sdb.create_domain('my_domain')
+}}}
+
+To list the names of all of the items in the domain, you could do this:
+
+{{{
 >>> for itemname in domain:
 ...     print itemname
 ... 
+}}}
+
+Of course, this is a brand new domain so there are no items contained within it yet.  However, the above construct would cycle through *ALL* items within the domain.  The paging of results is handled automatically by boto via a Python generator function.
+
+To create a new item within our new domain:
+
+{{{
 >>> item = domain.new_item('item1')
+}}}
+
+Because this item has no attribute name/value pairs associated with it, it really doesn't exist yet in SimpleDB.  However, by adding some key/value pairs to it, we automatically store those values in SimpleDB:
+
+{{{
 >>> item['key1'] = 'value1'
 >>> item['key2'] = 'value2'
+}}}
+
+In addition to storing scalar string values, you can also store lists of values like this:
+
+{{{
+>>> item['key3'] = ['one', 'two', 'three']
+}}}
+
+Or you can append values to existing attribute names using the add_value method like this:
+
+{{{
 >>> item.add_value('key2', 'value2_1')
+}}}
+
+With add_value, the value you add is to the attribute name ('key2') in addition to any existing values.  So, it's like appending to a list.
+
+If we now go and ask the domain object to retrieve the Item called 'item1' from SimpleDB, we can see our values have, in fact, been stored:
+
+{{{
 >>> item = domain.get_item('item1')
 >>> item
-{u'key2': [u'value2', u'value2_1'], u'key1': u'value1'}
+{u'key2': [u'value2', u'value2_1'], u'key1': u'value1', 'u'key3': [u'one', u'two', u'three']}
 >>> 
+}}}
+
+If we now go back and iterate over the items in the domain, we can see our new item, 'item1' show up.
+
+{{{
 >>> for itemname in domain:
 ...     print itemname
 ... 
 item1
+}}}
+
+We can also query our domain, like this:
+
+{{{
 >>> rs = domain.query("['key1' = 'value1']")
 >>> for itemname in rs:
 ...     print itemname
@@ -33,3 +85,9 @@ item1
 item1
 >>> 
 }}}
+
+Here again, the paging of search results will be handled transparently by boto.  If there are 10,000 items matching the query you will eventually pull all of those results over (unless SimpleDB cuts you off for taking up too much compute time!).
+
+More examples and good stuff to follow.  Enjoy and don't be shy with those comments!
+
+Mitch
