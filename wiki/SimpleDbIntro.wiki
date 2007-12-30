@@ -1,0 +1,33 @@
+#summary Introduction to SimpleDB in Boto
+#labels Featured
+
+= Introduction =
+
+This page will give you a quick overview of the current boto SimpleDB library.
+
+= Details =
+
+>>> import boto
+>>> sdb = boto.connect_sdb()
+>>> domain = sdb.create_domain('my_domain')
+>>> for itemname in domain:
+...     print itemname
+... 
+>>> item = domain.new_item('item1')
+>>> item['key1'] = 'value1'
+>>> item['key2'] = 'value2'
+>>> item.add_value('key2', 'value2_1')
+>>> item = domain.get_item('item1')
+>>> item
+{u'key2': [u'value2', u'value2_1'], u'key1': u'value1'}
+>>> 
+>>> for itemname in domain:
+...     print itemname
+... 
+item1
+>>> rs = domain.query("['key1' = 'value1']")
+>>> for itemname in rs:
+...     print itemname
+... 
+item1
+>>> 
