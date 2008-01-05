@@ -20,11 +20,11 @@ Once you have a connection, you can create a new domain, like this:
 >>> domain = sdb.create_domain('my_domain')
 }}}
 
-To list the names of all of the items in the domain, you could do this:
+To list the all of the items in the domain, you could do this:
 
 {{{
->>> for itemname in domain:
-...     print itemname
+>>> for item in domain:
+...     print item.name
 ... 
 }}}
 
@@ -69,18 +69,27 @@ If we now go and ask the domain object to retrieve the Item called 'item1' from 
 If we now go back and iterate over the items in the domain, we can see our new item, 'item1' show up.
 
 {{{
->>> for itemname in domain:
-...     print itemname
+>>> for item in domain:
+...     print item.name
 ... 
 item1
+}}}
+
+Note that item object returned by the query resultset iterator is a live Item object.  When returned by the resultset object, it contains only the name of the item because SimpleDB does not allow attribute values to be returned as part of a query, only item names.  However, if you access an attribute of the Item object, it will automatically retrieve all attributes for the item from SimpleDB.  So, in our above example we could also do something like this:
+
+{{{
+>>> for item in domain:
+...     print item.name, item['key1']
+...
+item1, value1
 }}}
 
 We can also query our domain, like this:
 
 {{{
 >>> rs = domain.query("['key1' = 'value1']")
->>> for itemname in rs:
-...     print itemname
+>>> for item in rs:
+...     print item.name
 ... 
 item1
 >>> 
