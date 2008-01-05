@@ -3,18 +3,27 @@
 
 = Introduction =
 
-This page will give you a quick overview of the current boto SimpleDB library.
+This page will give you a quick overview of the current boto SimpleDB library.  Before reading this it would probably be a good idea to check out these resources from Amazon:
 
-= Details =
+  * [http://docs.amazonwebservices.com/AmazonSimpleDB/2007-11-07/DeveloperGuide/ SimpleDB Developer's Guide] 
+  * [http://docs.amazonwebservices.com/AmazonSimpleDB/2007-11-07/GettingStartedGuide/ SimpleDB Getting Started Guide] 
 
-To begin with SimpleDB, you create a connection to the SimpleDB service just like you do with all other boto interfaces.
+= Let's Get Started =
+
+To begin with SimpleDB, you need to create a connection to the SimpleDB service just like you do with all other boto interfaces.
 
 {{{
 >>> import boto
 >>> sdb = boto.connect_sdb()
 }}}
 
-Once you have a connection, you can create a new domain, like this:
+==Create a Domain==
+
+Once you have a connection, you can create a new domain.  According to the AWS docs:
+
+        All Amazon SimpleDB information is stored in domains. Domains are similar to tables that contain similar data. You can execute queries against a domain, but cannot execute joins between domains.
+
+To create a new domain:
 
 {{{
 >>> domain = sdb.create_domain('my_domain')
@@ -29,6 +38,8 @@ To list the all of the items in the domain, you could do this:
 }}}
 
 Of course, this is a brand new domain so there are no items contained within it yet.  However, the above construct would cycle through *ALL* items within the domain.  The paging of results is handled automatically by boto via a Python generator function.
+
+==Adding Items to the Domain==
 
 To create a new item within our new domain:
 
@@ -57,6 +68,8 @@ Or you can append values to existing attribute names using the add_value method 
 
 With add_value, the value you add is to the attribute name ('key2') in addition to any existing values.  So, it's like appending to a list.
 
+==Getting Items from the Domain==
+
 If we now go and ask the domain object to retrieve the Item called 'item1' from SimpleDB, we can see our values have, in fact, been stored:
 
 {{{
@@ -83,6 +96,8 @@ Note that item object returned by the query resultset iterator is a live Item ob
 ...
 item1, value1
 }}}
+
+==Querying SimpleDB==
 
 We can also query our domain, like this:
 
