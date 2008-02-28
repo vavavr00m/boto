@@ -20,7 +20,13 @@ The following sections and options are currently recognized within the boto conf
 
 == Credentials ==
 
-The {{{Credentials}}} section is used to specify the AWS credentials used for all boto requests.  This section defines the following options:
+The {{{Credentials}}} section is used to specify the AWS credentials used for all boto requests.  The order of precedence for authentication credentials is:
+
+  1. Credentials passed into Connection class constructor.
+  1. Credentials specified by environment variables
+  1. Credentials specified as options in the config file.
+
+This section defines the following options:
 
 *aws_access_key_id*
 
@@ -73,3 +79,16 @@ The {{{Boto}}} section is used to specify options that control the operaton of b
     The number of times to retry failed requests to an AWS server.  If boto
     receives an error from AWS, it will attempt to recover and retry the request.
     The default number of retries is 5 but you can change the default with this option.
+
+=== Examples ===
+
+{{{
+[Boto]
+debug = 0
+num_retries = 10
+
+proxy = myproxy.com
+proxy_port = 8080
+proxy_user = foo
+proxy_pass = bar
+}}}
