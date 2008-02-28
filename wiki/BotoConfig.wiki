@@ -22,20 +22,19 @@ The following sections and options are currently recognized within the boto conf
 
 The {{{Credentials}}} section is used to specify the AWS credentials used for all boto requests.  This section defines the following options:
 
-aws_access_key_id
+*aws_access_key_id*
 
     Your AWS access key
 
-aws_secret_access_key
+*aws_secret_access_key*
 
     Your AWS secret access key
 
 === Example ===
 
+{{{
 [Credentials]
 aws_access_key_id = <your access key>
 aws_secret_access_key = <your secret key>
-
-
-
+}}}
 
