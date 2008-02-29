@@ -10,9 +10,9 @@ In addition, the S3 service introduced bucket locality in late 2007.  This allow
 
 In both of these cases, there is a desire to support the new exciting functionality provided by AWS but that needs to balanced with an equally strong desire to not break existing code.  There are really two main ways to address this:
 
-  1. Merge both API's into single API that supports both features.  This is good in that all users would automatically gain access to all functionality.  The downside is that it makes the code much more complex and ugly and still introduces significant risk of breaking existing code.
+  # Merge both API's into single API that supports both features.  This is good in that all users would automatically gain access to all functionality.  The downside is that it makes the code much more complex and ugly and still introduces significant risk of breaking existing code.
 
-  1. Provide a way to allow multiple versions of code to co-exist and provide a way for boto users to select which version they wish to use.
+  #. Provide a way to allow multiple versions of code to co-exist and provide a way for boto users to select which version they wish to use.
 
 The new boto extension capability introduced in [http://code.google.com/p/boto/source/detail?r=523 Change Set 523] takes the second approach.  Here's how it works.
 
