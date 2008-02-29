@@ -1,4 +1,5 @@
 #summary Site and user configuration of boto.
+#labels Featured
 
 = Introduction =
 
