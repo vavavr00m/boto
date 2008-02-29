@@ -1,5 +1,4 @@
 #summary Release Notes for 0.9b release of Boto
-#labels Featured
 
 = Introduction =
 
