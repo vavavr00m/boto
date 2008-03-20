@@ -8,7 +8,7 @@ A collection of examples using boto to interface with Amazon's Elastic Compute C
 = Details =
 
 Operations on EC2 Image objects:
-  * run
+  * [run]
   * deregister
   * get_launch_permissions
   * set_launch_permissions
