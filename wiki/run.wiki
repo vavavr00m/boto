@@ -24,7 +24,7 @@ Reservation of instances
 >>> images = ec2_conn.get_all_images(image_ids=['ami-b111f4d8'])
 >>> images[0]
 Image:ami-b111f4d8
->>> reservation = images[0].run(1,1, 'yourKeyPair)
+>>> reservation = images[0].run(1,1, 'yourKeyPair')
 >>> reservation
 Reservation:r-c2dc2fab
 
