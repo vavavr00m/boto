@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Shows an example on how to get all the keys and print the name of each key
 
 = Introduction =
 
