@@ -14,7 +14,7 @@ import sys
 conn = S3Connection('____________________', '________________________________________')
 bucket = conn.get_bucket('bucketname')
 
-rs = bucket.get_all_keys()
+rs = bucket.list()
 
 for key in rs:
    print key.name
