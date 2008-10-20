@@ -27,9 +27,9 @@ $ export PYTHONPATH=$PYTHONPATH:/home/mitch/Projects/boto
 You would probably want to add this to one of your startup scripts to make sure it gets set each time you login or start up a shell.  You may also need to add the PYTHONPATH environment variable to your IDE's settings.
 
 ===Add a symbolic link to your boto directory in the Python site===
-Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.4/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
+Let's assume that your Python is installed in /usr/local.  You will then find a directory called /usr/local/lib/python2.x/site-packages.  Note that you will have to adjust that path to your own installation and Python version number.  To create the symbolic link you would:
 {{{
-$ sudo ln -s /home/mitch/Projects/boto /usr/local/lib/python2.4/site-packages
+$ sudo ln -s /home/mitch/Projects/boto/boto /usr/local/lib/python2.4/site-packages
 }}}
 This approach would make the boto directory available to all users on the system but requires the ability to sudo or act as root on your system.
 
