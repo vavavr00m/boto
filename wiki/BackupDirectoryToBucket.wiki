@@ -1,4 +1,4 @@
-This will take a directory, Tar it, and back the whole thing up to S3
+#Take directory, Tar it, and backup to S3
 
 = Introduction =
 
