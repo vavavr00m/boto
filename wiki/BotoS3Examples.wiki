@@ -23,4 +23,5 @@ Operations on Bucket objects:
   * EnableLogging
   * DisableLogging
   * GetLoggingStatus
-  * SetAsLoggingTarget
+  * SetAsLoggingTarget  
+  * BackupDirectoryToBucket
