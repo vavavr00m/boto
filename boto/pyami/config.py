@@ -25,7 +25,6 @@ import boto
 
 BotoConfigLocations = ['/etc/boto.cfg', os.path.expanduser('~/.boto')]
 BotoConfigPath = BotoConfigLocations[0]
-UserConfigPath = BotoConfigLocations[1]
 
 class Config(ConfigParser.SafeConfigParser):
 
@@ -59,7 +58,7 @@ class Config(ConfigParser.SafeConfigParser):
         self.set(section, option, value)
 
     def save_user_option(self, section, option, value):
-        self.save_option(UserConfigPath, section, option, value)
+        self.save_option(os.path.expanduser(UserConfigPath), section, option, value)
 
     def save_system_option(self, section, option, value):
         self.save_option(BotoConfigPath, section, option, value)
@@ -146,8 +145,6 @@ class Config(ConfigParser.SafeConfigParser):
         import simplejson
         sdb = boto.connect_sdb()
         domain = sdb.lookup(domain_name)
-        if not domain:
-            domain = sdb.create_domain(domain_name)
         item = domain.new_item(item_name)
         item.active = False
         for section in self.sections():
@@ -168,6 +165,7 @@ class Config(ConfigParser.SafeConfigParser):
             d = simplejson.loads(item[section])
             for attr_name in d.keys():
                 attr_value = d[attr_name]
+                print attr_name, attr_value
                 if attr_value == None:
                     attr_value = 'None'
                 if isinstance(attr_value, bool):

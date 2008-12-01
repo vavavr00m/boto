@@ -62,14 +62,8 @@ class Distribution:
             new_config.cnames = cnames
         if comment != None:
             new_config.comment = comment
-        self.etag = self.connection.set_distribution_config(self.id, self.etag, new_config)
+        self.connection.set_distribution_config(self.id, self.etag, new_config)
         self.config = new_config
-
-    def enable(self):
-        self.update(enabled=True)
-
-    def disable(self):
-        self.update(enabled=False)
 
     def delete(self):
         self.connection.delete_distribution(self.id, self.etag)
@@ -119,10 +113,10 @@ class DistributionConfig:
         elif name == 'Comment':
             self.comment = value
         elif name == 'Enabled':
-            if value.lower() == 'true':
-                self.enabled = True
+            if value.lower == 'true':
+                self.status = True
             else:
-                self.enabled = False
+                self.status = False
         elif name == 'CallerReference':
             self.caller_reference = value
         else:
@@ -153,23 +147,21 @@ class DistributionSummary:
     def endElement(self, name, value, connection):
         if name == 'Id':
             self.id = value
-        elif name == 'Status':
-            self.status = value
         elif name == 'LastModifiedTime':
             self.last_modified_time = value
+        elif name == 'Status':
+            self.status = value
         elif name == 'DomainName':
             self.domain_name = value
-        elif name == 'Origin':
-            self.origin = value
         elif name == 'CNAME':
             self.cnames.append(value)
         elif name == 'Comment':
             self.comment = value
         elif name == 'Enabled':
-            if value.lower() == 'true':
-                self.enabled = True
+            if value.lower == 'true':
+                self.status = True
             else:
-                self.enabled = False
+                self.status = False
         else:
             setattr(self, name, value)
 
