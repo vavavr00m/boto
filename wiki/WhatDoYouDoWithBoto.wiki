@@ -1,0 +1,12 @@
+#summary Who's using boto and what are they doing with it?
+
+= Introduction =
+
+There are quite a few people using boto.  We average 50+ downloads a week and there are well over 200 people on the discussion list.  I'd love to know what the heck all of you people are doing with it.  If you are able to share some info, please add it to the list below.
+
+
+= Details =
+
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
