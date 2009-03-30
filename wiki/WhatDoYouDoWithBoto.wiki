@@ -7,6 +7,10 @@ There are quite a few people using boto.  We average 50+ downloads a week and th
 
 = Details =
 
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+  * [http://twitter.com/ivan_d ivan_d] says - I used #boto to store Twitter social graph on simple db. I had written a simple python crawler. Thanks for #boto!
+  * Nate Aune says - I just gave a talk at PyCon about using Boto as a component for
+PondCMS, a hosted and supported Plone service on EC2. You can download
+the slides here to learn more about the project:
+http://us.pycon.org/media/2009/talkdata/PyCon2009/066/PyCon_2009_-_Plone_in_the_Cloud.pdf
+
+ 
