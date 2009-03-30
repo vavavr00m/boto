@@ -5,7 +5,7 @@
 There are quite a few people using boto.  We average 50+ downloads a week and there are well over 200 people on the discussion list.  I'd love to know what the heck all of you people are doing with it.  If you are able to share some info, please add it to the list below.
 
 
-= Details =
+= Cool Stuff =
 
   * [http://twitter.com/ivan_d ivan_d] says - I used #boto to store Twitter social graph on simple db. I had written a simple python crawler. Thanks for #boto!
   * Nate Aune says - I just gave a talk at PyCon about using Boto as a component for PondCMS, a hosted and supported Plone service on EC2. You can download the slides here to learn more about the project: http://us.pycon.org/media/2009/talkdata/PyCon2009/066/PyCon_2009_-_Plone_in_the_Cloud.pdf
