@@ -20,4 +20,7 @@ There are quite a few people using boto.  We average 50+ downloads a week and th
     * Shutdown the instance again
   Not particularly sophisticated I guess, but it works very well :-). 
 
+  * Elias Torres of Lookery says - I'm using boto for doing uploading large amounts of files to S3 from
+Apache Hadoop. 
+
  
