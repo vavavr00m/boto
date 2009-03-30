@@ -13,4 +13,11 @@ There are quite a few people using boto.  We average 50+ downloads a week and th
 
   * Eric Evans says - I use boto with duplicity[1] for backups. I follow that list as well, and anecdotally there seems to be a lot of other people who do as well.
 
+  * Nikolaus Rath says - I'm using it for backups:
+    * Start an EC2 instance
+    * Mount an EBS volume
+    * rsync local disk to EBS
+    * Shutdown the instance again
+  Not particularly sophisticated I guess, but it works very well :-). 
+
  
