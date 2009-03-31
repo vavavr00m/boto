@@ -1,4 +1,5 @@
 #summary Who's using boto and what are they doing with it?
+#labels Featured
 
 = Introduction =
 
@@ -7,19 +8,41 @@ There are quite a few people using boto.  We average 50+ downloads a week and th
 
 = Cool Stuff =
 
-  * *[http://twitter.com/ivan_d ivan_d]* says - I used #boto to store Twitter social graph on simple db. I had written a simple python crawler. Thanks for #boto!
+=== *[http://twitter.com/ivan_d ivan_d]*===
+I used #boto to store Twitter social graph on simple db. I had written a simple python crawler. Thanks for #boto!
 
-  * *Nate Aune* says - I just gave a talk at PyCon about using Boto as a component for PondCMS, a hosted and supported Plone service on EC2. You can download the slides here to learn more about the project: http://us.pycon.org/media/2009/talkdata/PyCon2009/066/PyCon_2009_-_Plone_in_the_Cloud.pdf
+=== *Nate Aune* ===
+I just gave a talk at PyCon about using Boto as a component for PondCMS, a hosted and supported Plone service on EC2. You can download the slides here to learn more about the project: http://us.pycon.org/media/2009/talkdata/PyCon2009/066/PyCon_2009_-_Plone_in_the_Cloud.pdf
 
-  * *Eric Evans* says - I use boto with duplicity[1] for backups. I follow that list as well, and anecdotally there seems to be a lot of other people who do as well.
+=== *Eric Evans* ===
+I use boto with duplicity[1] for backups. I follow that list as well, and anecdotally there seems to be a lot of other people who do as well.
 
-  * *Nikolaus Rath* says - I'm using it for backups:
-    * Start an EC2 instance
-    * Mount an EBS volume
-    * rsync local disk to EBS
-    * Shutdown the instance again
-  Not particularly sophisticated I guess, but it works very well :-). 
+=== *Nikolaus Rath* ===
+I'm using it for backups:
+ * Start an EC2 instance
+ * Mount an EBS volume
+ * rsync local disk to EBS
+ * Shutdown the instance again
+Not particularly sophisticated I guess, but it works very well :-). 
 
-  * *Elias Torres of Lookery* says - I'm using boto for doing uploading large amounts of files to S3 from Apache Hadoop. 
+
+=== *Elias Torres of Lookery* === 
+I'm using boto for doing uploading large amounts of files to S3 from Apache Hadoop. 
+
+=== *mARK bLOORE* ===
+i do batch processing on EC2.  i use boto to fire up 20 or 30
+instances, check that they started properly, transfer some files to
+them, and start a script.  (actually, i use ssh to start the script.)
+when done they use boto to save their results to S3.  the
+batch-controller script waits til those instances have gotten fairly
+started, and then fires up more...  i don't do them all at once
+because S3 can't keep up with loading data to them.
+
+i also use boto a lot indirectly, through s3funnel
+(http://s3funnel.googlecode.com/), which makes using S3 on the command
+line easy.
+
+i haven't used boto for other AWS stuff, except to find that SDB can't
+provide the data rate i needed.
 
  
