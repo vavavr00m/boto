@@ -45,4 +45,10 @@ line easy.
 i haven't used boto for other AWS stuff, except to find that SDB can't
 provide the data rate i needed.
 
+=== *dp* ===
+At my previous employer, I used boto for automated daily database
+backups to S3 and for a dynamic EC2 deployment system that allowed us
+on-demand scalability.
+
+Hooray for boto!
  
