@@ -51,4 +51,15 @@ backups to S3 and for a dynamic EC2 deployment system that allowed us
 on-demand scalability.
 
 Hooray for boto!
+
+=== * Mike Cariaso * ===
+http://www.snpedia.com/index.php/Promethease
+allows people to analyze their DNA, and pay $2 for improved performance. It uses boto for the FPS interface.
+
+http://www.RunBlast.com
+is a slightly neglected attempt to build a simplified interface to
+http://en.wikipedia.org/wiki/BLAST
+as well as the necessary databases and a parallelized implementation. It uses boto all over.
+
+
  
