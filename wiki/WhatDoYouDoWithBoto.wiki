@@ -61,5 +61,14 @@ is a slightly neglected attempt to build a simplified interface to
 http://en.wikipedia.org/wiki/BLAST
 as well as the necessary databases and a parallelized implementation. It uses boto all over.
 
+=== * Blair Bethwaite * ===
+We (www.messagelab.monash.edu.au) have been using boto to interface
+our grid computing middleware Nimrod/G with the cloud - more info
+about the project here: www.messagelab.monash.edu.au/NimrodInTheCloud.
+Nimrod is really a family of tools (where Nimrod/G provides the
+execution services) and there are higher level tools for optimisation,
+experimental design and workflows built on top. Boto has been very
+useful to us, if not for it we probably would have written an ugly
+wrapper interface around the Amazon client tools. Thanks!
 
  
