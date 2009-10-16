@@ -80,5 +80,7 @@ Check it out for yourself:
 
 http://www.intermapper.com/products/ec2-monitoring
 
+=== [http://bitbucket.org/cmoyer/botoweb botoweb] ===
+After working with Mitch, I developed a quick Framework designed to create your own web-services built inside of the Cloud called [http://bitbucket.org/cmoyer/botoweb botoweb]. Within a matter of moments you can quickly create a fully-featured REST interface with your own Authorization and Application logic. 
 
  
