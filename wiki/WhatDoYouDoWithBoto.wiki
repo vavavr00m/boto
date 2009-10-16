@@ -71,4 +71,14 @@ experimental design and workflows built on top. Boto has been very
 useful to us, if not for it we probably would have written an ugly
 wrapper interface around the Amazon client tools. Thanks!
 
+=== DartWare ===
+Thanks to the boto developers, DartWare was able to quickly throw
+together an Amazon CloudWatch plugin for their interactive monitoring
+suite InterMapper.
+
+Check it out for yourself:
+
+http://www.intermapper.com/products/ec2-monitoring
+
+
  
