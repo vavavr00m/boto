@@ -14,7 +14,7 @@ To begin with SimpleDB, you need to create a connection to the SimpleDB service 
 
 {{{
 >>> import boto
->>> sdb = boto.connect_sdb()
+>>> sdb = boto.connect_sdb('<your aws access key>', '<your aws secret key'>)
 }}}
 
 ==Create a Domain==
@@ -47,7 +47,7 @@ To create a new item within our new domain:
 >>> item = domain.new_item('item1')
 }}}
 
-Because this item has no attribute name/value pairs associated with it, it really doesn't exist yet in SimpleDB.  However, by adding some key/value pairs to it, we automatically store those values in SimpleDB:
+Because this item has no attribute name/value pairs associated with it, it really doesn't exist yet in SimpleDB.  It won't get persisted to SimpleDB until we call the .save() method on it.  But first, let's add some key/value pairs to it:
 
 {{{
 >>> item['key1'] = 'value1'
@@ -68,13 +68,19 @@ Or you can append values to existing attribute names using the add_value method 
 
 With add_value, the value you add is to the attribute name ('key2') in addition to any existing values.  So, it's like appending to a list.
 
-==Getting Items from the Domain==
+Time to save it to SimpleDB:
 
+{{{
+>>> item.save()
+}}}
+
+==Getting Items from the Domain==
+retrievedItem
 If we now go and ask the domain object to retrieve the Item called 'item1' from SimpleDB, we can see our values have, in fact, been stored:
 
 {{{
->>> item = domain.get_item('item1')
->>> item
+>>> retrievedItem = domain.get_item('item1')
+>>> retrievedItem
 {u'key2': [u'value2', u'value2_1'], u'key1': u'value1', 'u'key3': [u'one', u'two', u'three']}
 >>> 
 }}}
@@ -111,6 +117,17 @@ item1
 }}}
 
 Here again, the paging of search results will be handled transparently by boto.  If there are 10,000 items matching the query you will eventually pull all of those results over (unless SimpleDB cuts you off for taking up too much compute time!).
+
+If you already created your domain, and you want to reconnect to it:
+
+{{{
+>>> retrievedDomain = sdb.get_domain('my_domain')
+>>> for item in retrievedDomain:
+...     print item.name
+... 
+item1
+>>> 
+}}}
 
 More examples and good stuff to follow.  Enjoy and don't be shy with those comments!
 
