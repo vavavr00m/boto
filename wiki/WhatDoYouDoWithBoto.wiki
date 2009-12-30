@@ -83,4 +83,7 @@ http://www.intermapper.com/products/ec2-monitoring
 === [http://bitbucket.org/cmoyer/botoweb botoweb] ===
 After working with Mitch, I developed a quick Framework designed to create your own web-services built inside of the Cloud called [http://bitbucket.org/cmoyer/botoweb botoweb]. Within a matter of moments you can quickly create a fully-featured REST interface with your own Authorization and Application logic. 
 
+=== WikiTrans ===
+A few of us at Johns Hopkins University use boto to farm out translation tasks to Mechanical Turk. We send sentences in one language and ask users to translate them to another language. We then use the data collected to train statistical machine translation tools.
+
  
