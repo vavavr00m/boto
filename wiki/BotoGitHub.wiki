@@ -1,0 +1,9 @@
+#summary Boto source code on github.com
+
+The source code for the boto project is now managed on [http://github.com/ GitHub] rather than on Google Code.  To access the source code, visit:
+
+http://github.com/boto/boto.  
+
+You can still access the GitHub repository using Subversion tools.  See:
+
+http://github.com/blog/626-announcing-svn-support
