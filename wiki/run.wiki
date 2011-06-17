@@ -1,6 +1,6 @@
 =run=
 
-The reboot method of the Instance object provides a way to reboot an EC2 instance.
+The run method of the Instance object provides a way to reboot an EC2 instance.
 
 ==Method Description==
 [http://boto.googlecode.com/svn/trunk/doc/ec2-tut.txt ec2 Tutorial]
