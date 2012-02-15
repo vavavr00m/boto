@@ -1,0 +1,10 @@
+#summary Boto Downloads on github.com
+
+Releases of boto can now be downloaded from [http://pypi.python.org/pypi/boto/ PyPI] or from [http://github.com/ GitHub] rather than on Google Code.  To access the github downloads, visit:
+
+https://github.com/boto/boto/downloads
+
+
+You can still view the original downloads lists here:
+
+http://code.google.com/p/boto/downloads/list
